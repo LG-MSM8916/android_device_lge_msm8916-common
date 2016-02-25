@@ -58,6 +58,9 @@ export LD_SHIM_LIBS /system/lib/libril.so|liblge.so:/system/lib/libril.so|liblge
     chmod 0644 /sys/class/leds/red/brightness
 
 on fs
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
+
     mount_all fstab.qcom
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
@@ -764,4 +767,5 @@ service hwaddrs /system/bin/hwaddrs
     on property:init.svc.hwaddrs=stopped
     chmod 644 /data/misc/wifi/config
     chmod 644 /data/misc/bluetooth/bdaddr
+
 
