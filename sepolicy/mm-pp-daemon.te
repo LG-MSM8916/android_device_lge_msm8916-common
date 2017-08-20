@@ -1,1 +1,1 @@
-allow mm-pp-daemon device:chr_file { read write };
+allow mm-pp-daemon device:chr_file { ioctl };
