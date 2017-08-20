@@ -12,6 +12,3 @@ allow sensord input_device:dir search;
 allow sensord unlabeled:dir search;
 allow sensord input_device:chr_file read;
 allow sensord self:capability { dac_override dac_read_search fowner };
-allow sensord input_device:chr_file open;
-allow sensord self:capability fsetid;
-allow sensord system_data_file:file create;

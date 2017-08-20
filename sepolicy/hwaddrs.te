@@ -10,4 +10,3 @@ allow hwaddrs wifi_data_file:dir w_dir_perms;
 allow hwaddrs wifi_data_file:file create_file_perms;
 
 allow hwaddrs misc_block_device:blk_file read;
-allow hwaddrs misc_block_device:blk_file open;
