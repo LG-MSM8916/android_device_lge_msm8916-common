@@ -1,1 +1,1 @@
-allow qmuxd device:chr_file { ioctl };
+allow qmuxd device:chr_file { read write };

@@ -1,2 +1,2 @@
 allow netmgrd self:capability dac_override;
-allow netmgrd device:chr_file { ioctl };
+allow netmgrd device:chr_file { read write };
