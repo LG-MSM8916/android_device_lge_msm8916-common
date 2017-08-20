@@ -1,2 +1,3 @@
 allow wcnss_service misc_block_device:blk_file { getattr };
 allow wcnss_service misc_block_device:blk_file read;
+allow wcnss_service misc_block_device:blk_file open;
