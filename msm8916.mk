@@ -151,6 +151,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(LOCAL_PATH)/configs/qmi_config.xml:system/etc/data/qmi_config.xml
 
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.rc \
@@ -264,4 +268,4 @@ PRODUCT_PACKAGES += \
 
 # HWADDRS
 PRODUCT_PACKAGES += \
-    hwaddrs
+hwaddrs
