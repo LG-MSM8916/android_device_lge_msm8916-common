@@ -146,9 +146,6 @@ on post-fs-data
     mkdir /data/fota 0771
     chown system system /data/fota
 
-    #Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
 
@@ -620,13 +617,6 @@ service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
     disabled
     oneshot
 
-service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
-    class late_start
-    user root
-    group root
-    oneshot
-    disabled
-
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
@@ -767,5 +757,6 @@ service hwaddrs /system/bin/hwaddrs
     on property:init.svc.hwaddrs=stopped
     chmod 644 /data/misc/wifi/config
     chmod 644 /data/misc/bluetooth/bdaddr
+
 
 
