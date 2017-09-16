@@ -175,6 +175,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# Releasetools script
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/check_features.sh:install/bin/check_features.sh
+
 # RIL
 PRODUCT_PACKAGES += \
     libxml2 \

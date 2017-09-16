@@ -133,6 +133,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap_to_wake"
 BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 BOARD_USES_CYANOGEN_HARDWARE := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
