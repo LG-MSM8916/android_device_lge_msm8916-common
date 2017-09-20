@@ -190,6 +190,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Camera
+PRODUCT_PACKAGES += \
+    libmm-qcamera \
+    camera.msm8916
+
 # Telephony-ext
 PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
@@ -197,6 +202,13 @@ PRODUCT_BOOT_JARS += telephony-ext
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
+
+# Lights
+ifneq ($(TARGET_PROVIDES_LIBLIGHT),true)
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    lights.msm8916
+endif
 
 # Wifi
 PRODUCT_PACKAGES += \
