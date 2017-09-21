@@ -44,6 +44,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audiod \
     audio.a2dp.default \
     audio.primary.msm8916 \
@@ -64,6 +66,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -74,6 +80,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
     copybit.msm8916 \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
@@ -108,6 +117,7 @@ PRODUCT_COPY_FILES += \
 # Keystore
 ifneq ($(TARGET_PROVIDES_KEYMASTER),true)
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
     keystore.msm8916
 endif
 
@@ -139,6 +149,7 @@ PRODUCT_BOOT_JARS += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.msm8916
 
 # QMI
@@ -150,6 +161,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dsi_config.xml:system/etc/data/dsi_config.xml \
     $(LOCAL_PATH)/configs/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(LOCAL_PATH)/configs/qmi_config.xml:system/etc/data/qmi_config.xml
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
+    lights.msm8916
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 # HIDL
 PRODUCT_COPY_FILES += \
@@ -185,6 +209,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     libxml2 \
     liblge \
     libqsap_sdk \
@@ -192,6 +217,7 @@ PRODUCT_PACKAGES += \
 
 # Snap
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
     Snap
 
 # Camera
@@ -268,4 +294,4 @@ PRODUCT_PACKAGES += \
 
 # HWADDRS
 PRODUCT_PACKAGES += \
-hwaddrs
+    hwaddrs
