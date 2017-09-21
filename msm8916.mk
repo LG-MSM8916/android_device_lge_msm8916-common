@@ -100,8 +100,8 @@ PRODUCT_PACKAGES += \
     e2fsck
 
 # Gestures and Glove mode package
-#PRODUCT_PACKAGES += \
-#    DeviceSettings
+PRODUCT_PACKAGES += \
+    DeviceSettings
 
 # Jelly
 #PRODUCT_PACKAGES += \

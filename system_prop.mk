@@ -122,6 +122,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
+
+# Settings properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.settings.doze.hide.preference=true
+
 # HWADDRS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bt.bdaddr_path="/data/misc/bluetooth/bdaddr"
