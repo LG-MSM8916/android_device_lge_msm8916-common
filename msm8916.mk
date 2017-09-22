@@ -115,11 +115,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 # Keystore
-ifneq ($(TARGET_PROVIDES_KEYMASTER),true)
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     keystore.msm8916
-endif
 
 # Media
 PRODUCT_PACKAGES += \
@@ -240,12 +238,6 @@ PRODUCT_BOOT_JARS += telephony-ext
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
-
-# Lights
-ifneq ($(TARGET_PROVIDES_LIBLIGHT),true)
-PRODUCT_PACKAGES += \
-    lights.msm8916
-endif
 
 # Wifi
 PRODUCT_PACKAGES += \
