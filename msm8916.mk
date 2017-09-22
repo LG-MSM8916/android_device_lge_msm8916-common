@@ -206,7 +206,6 @@ PRODUCT_PACKAGES += \
 # Lights
 ifneq ($(TARGET_PROVIDES_LIBLIGHT),true)
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl \
     lights.msm8916
 endif
 
