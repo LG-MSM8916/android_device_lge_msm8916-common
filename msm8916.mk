@@ -138,7 +138,6 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -148,8 +147,8 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+#PRODUCT_BOOT_JARS += \
+#    qcmediaplayer
 
 # Power HAL
 PRODUCT_PACKAGES += \
@@ -220,8 +219,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     security.perf_harden=0
 
 # QuickCircle Case App
-PRODUCT_PACKAGES += \
-    FlipFlap
+#PRODUCT_PACKAGES += \
+#    FlipFlap
 
 # Releasetools script
 PRODUCT_COPY_FILES += \
