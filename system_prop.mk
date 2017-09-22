@@ -38,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.enable.sglscale=1 \
     persist.hwc.mdpcomp.enable=true \
-    ro.opengles.version=196608 \
+    ro.opengles.version=196610 \
     ro.qualcomm.cabl=2
 
 # DPM
