@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Debug
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.adb.secure=0 \
     security.perf_harden=0
