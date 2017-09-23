@@ -23,7 +23,7 @@
 inline const char* BtmGetDefaultName()
 {
 	char device[PROPERTY_VALUE_MAX];
-	property_get("ro.boot.device", device, "");
+	property_get("ro.product.device", device, "");
 
 	if (!strcmp("m216", device)) {
 		return "LG K10";
