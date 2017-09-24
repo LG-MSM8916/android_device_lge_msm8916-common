@@ -122,6 +122,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
+#SDCard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=false
 
 # Settings properties
 PRODUCT_PROPERTY_OVERRIDES += \
