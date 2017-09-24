@@ -254,6 +254,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    hostapd \
     dhcpcd.conf \
     libwcnss_qmi \
     libwpa_client \
