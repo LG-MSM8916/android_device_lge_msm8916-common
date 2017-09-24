@@ -248,10 +248,6 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     camera.msm8916
 
-# Telephony-ext
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
