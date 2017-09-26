@@ -104,13 +104,13 @@ PRODUCT_PACKAGES += \
     DeviceSettings
 
 # Jelly
-#PRODUCT_PACKAGES += \
-#    Jelly
+PRODUCT_PACKAGES += \
+    Jelly
 
 # FM packages
-#PRODUCT_PACKAGES += \
-#    FMRadio \
-#    libfmjni
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # IRSC
 PRODUCT_COPY_FILES += \
