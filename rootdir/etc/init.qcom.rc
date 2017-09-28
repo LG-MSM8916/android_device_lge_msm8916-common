@@ -706,41 +706,6 @@ service vm_bms /system/bin/vm_bms
     user root
     group root wakelock
 
-service ims_rtp_daemon /system/bin/ims_rtp_daemon
-   class main
-   user system
-   socket ims_rtpd stream 0660 system radio
-   group radio diag diag inet log
-   disabled
-
-on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
-
-service imscmservice /system/bin/imscmservice
-      class main
-      user system
-    group radio diag diag log
-    disabled
-
-on property:sys.ims.DATA_DAEMON_STATUS=1
-    start imscmservice
-
-service imsdatadaemon /system/bin/imsdatadaemon
-    class main
-    user system
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
-    disabled
-
-on property:sys.ims.QMI_DAEMON_STATUS=1
-    start imsdatadaemon
-
-service imsqmidaemon /system/bin/imsqmidaemon
-    class main
-    user system
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-
 service fm_dl /system/bin/sh /init.qcom.fm.sh
     class late_start
     user system

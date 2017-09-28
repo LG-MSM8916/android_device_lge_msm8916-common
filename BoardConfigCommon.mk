@@ -89,9 +89,6 @@ USE_OPENGL_RENDERER := true
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# Filesystem
-TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(LOCAL_PATH)/android_filesystem_config.h
-
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
