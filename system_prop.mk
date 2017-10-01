@@ -95,6 +95,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=9
 
+# Data properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.android.mobiledata=false
+
 # Set max background services
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.max_starting_bg=8
