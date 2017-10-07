@@ -165,12 +165,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     ueventd.qcom.rc
 
-# Debug
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
-    ro.adb.secure=0 \
-    security.perf_harden=0
-
 # QuickCircle Case App
 PRODUCT_PACKAGES += \
     FlipFlap
