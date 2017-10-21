@@ -689,6 +689,7 @@ service wcnss-service /system/bin/wcnss_service
 service sensord /system/bin/sensord
     class main
     user root
+    group system misc input
 
 on property:init.svc.zygote=restarting
     restart sensord
