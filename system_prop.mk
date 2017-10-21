@@ -118,9 +118,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.narrow.searchrange=1
 
 # WiFi Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
+# PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.debug.wfd.enable=1 \
+#    persist.sys.wfd.virtual=0
 
 #SDCard
 PRODUCT_PROPERTY_OVERRIDES += \
