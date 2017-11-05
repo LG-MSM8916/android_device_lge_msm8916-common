@@ -641,6 +641,12 @@ service perfd /system/vendor/bin/perfd
    user root
    disabled
 
+service mpdecision /system/bin/mpdecision --avg_comp
+   class main
+   user root
+   group system
+   disabled
+
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
