@@ -234,7 +234,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libxml2 \
-    liblge \
     libqsap_sdk \
     librmnetctl
 
