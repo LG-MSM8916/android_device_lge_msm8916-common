@@ -20,6 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false \
     camera2.portability.force_api=1 \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
@@ -37,8 +38,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.enable.sglscale=1 \
     persist.hwc.mdpcomp.enable=true \
-    ro.opengles.version=196608 \
-    ro.qualcomm.cabl=2
+    ro.opengles.version=196610 \
+    ro.qualcomm.cabl=2 \
+    debug.hwui.use_buffer_age=false
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -95,10 +97,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     ro.telephony.default_network=9
 
-# Data properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.android.mobiledata=false
-
 # Set max background services
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.max_starting_bg=8
@@ -123,6 +121,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # PRODUCT_PROPERTY_OVERRIDES += \
 #    persist.debug.wfd.enable=1 \
 #    persist.sys.wfd.virtual=0
+
+#SDCard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=false
+
+# Settings properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.settings.doze.hide.preference=true
 
 # HWADDRS
 PRODUCT_PROPERTY_OVERRIDES += \
