@@ -238,7 +238,7 @@ struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "H631 lights Module",
-    .author = "Google, Inc., whoshotjr2006",
+    .name = "c90 lights Module",
+    .author = "Google, Inc., whoshotjr2006, PVineeth",
     .methods = &lights_module_methods,
 };
