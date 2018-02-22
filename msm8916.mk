@@ -60,7 +60,6 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
@@ -85,8 +84,8 @@ PRODUCT_PACKAGES += \
     e2fsck
 
 # Gestures and Glove mode package
-PRODUCT_PACKAGES += \
-    DeviceSettings
+# PRODUCT_PACKAGES += \
+#     DeviceSettings
 
 # Jelly
 PRODUCT_PACKAGES += \
@@ -165,9 +164,11 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     ueventd.qcom.rc
 
-# QuickCircle Case App
-PRODUCT_PACKAGES += \
-    FlipFlap
+# Debug
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    security.perf_harden=0
 
 # Releasetools script
 PRODUCT_COPY_FILES += \

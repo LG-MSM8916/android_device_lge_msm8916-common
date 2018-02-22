@@ -431,8 +431,8 @@ on boot
     chown system system /sys/power/autosleep
     chown system system /sys/power/state
     chown system system /sys/power/wakeup_count
-    chown radio wakelock /sys/power/wake_lock
-    chown radio wakelock /sys/power/wake_unlock
+    chown radio system /sys/power/wake_lock
+    chown radio system /sys/power/wake_unlock
     chmod 0660 /sys/power/state
     chmod 0660 /sys/power/wake_lock
     chmod 0660 /sys/power/wake_unlock
@@ -695,7 +695,6 @@ service wcnss-service /system/bin/wcnss_service
 service sensord /system/bin/sensord
     class main
     user root
-    group system misc input root
 
 on property:init.svc.zygote=restarting
     restart sensord
