@@ -41,7 +41,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=2 \
     debug.hwui.use_buffer_age=false
-    persist.media.treble_omx=false
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
