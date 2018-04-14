@@ -91,6 +91,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     memtrack.msm8916
 
+# Launcher
+PRODUCT_PACKAGES += \
+    Launcher3
+
 # QMI
 PRODUCT_PACKAGES += \
     libtinyxml
