@@ -1,1 +1,3 @@
-#allow priv_app device:dir { open read };
+type priv_app, domain;
+
+allow priv_app device:dir { open read };
