@@ -718,7 +718,7 @@ on property:gsm.version.baseband=""
 service vm_bms /system/bin/vm_bms
     class main
     user root
-    group root wakelock
+    group root
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
