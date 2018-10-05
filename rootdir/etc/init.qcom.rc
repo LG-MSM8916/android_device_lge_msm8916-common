@@ -527,7 +527,7 @@ on property:bluetooth.hciattach=false
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps diag
+    group radio audio bluetooth gps nfc oem_2950
 
 service netmgrd /system/bin/netmgrd
     class main
