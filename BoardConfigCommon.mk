@@ -116,8 +116,8 @@ BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # CMHW
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap_to_wake"
-BOARD_HARDWARE_CLASS += hardware/lineage/lineagehw
-BOARD_USES_CYANOGEN_HARDWARE := true
+#BOARD_HARDWARE_CLASS += hardware/lineage/lineagehw
+#BOARD_USES_CYANOGEN_HARDWARE := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
