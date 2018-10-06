@@ -167,3 +167,6 @@ USE_SENSOR_MULTI_HAL := true
 
 #RIL
 TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/board/config.fs
+
+# Binder
+TARGET_USES_64_BIT_BINDER := true
