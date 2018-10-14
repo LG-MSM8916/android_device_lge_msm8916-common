@@ -25,10 +25,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /vendor/etc/init/hw/init.qcom.usb.rc
-import /vendor/etc/init/hw/init.qcom.power.rc
-import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.board.sensors.rc
+import init.qcom.usb.rc
+import init.qcom.power.rc
+import init.target.rc
+import init.board.sensors.rc
 
 on early-init
     symlink /dev/diag_lge /dev/diag
