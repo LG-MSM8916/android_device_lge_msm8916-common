@@ -38,8 +38,6 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export LD_SHIM_LIBS /system/lib/libril.so|liblge.so:/system/lib/libril.so|liblge.so:/system/vendor/lib/lib-imsvt.so|libshims_ims.so
-    export LD_SHIM_LIBS "/system/vendor/lib/libwvm.so|libwvm_shim.so"
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
@@ -654,11 +652,6 @@ service time_daemon /system/bin/time_daemon
    user root
    group root
 
-#service audiod /system/bin/audiod
-#   class late_start
-#   user system
-#   group system
-
 service ppd /system/bin/mm-pp-daemon
     class late_start
     disabled
@@ -672,7 +665,7 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service wcnss-service /system/bin/wcnss_service
+service wcnss-service /vendor/bin/wcnss_service
     class main
     user root
     group system wifi
@@ -724,6 +717,9 @@ service hwaddrs /system/bin/hwaddrs
     chmod 644 /data/misc/bluetooth/bdaddr
 
 service loggy /vendor/bin/loggy.sh
-    class core
-    user root
-    oneshot
+   class core
+   user root
+   oneshot
+
+
+
