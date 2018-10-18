@@ -117,12 +117,14 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9306; \
         ln -sf /data/misc/audio/mbhc.bin \
         $(TARGET_OUT_ETC)/firmware/wcd9306/wcd9306_mbhc.bin)
 
-WCNSS_CFG_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-$(WCNSS_CFG_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+WCNSS_CONFIG_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+$(WCNSS_CONFIG_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "WCNSS config link: $@"
 	@mkdir -p $(dir $@)
+	@rm -rf $@
 	$(hide) ln -sf /data/misc/wifi/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_CFG_SYMLINK)
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_CONFIG_SYMLINK)
 
 endif
 endif
