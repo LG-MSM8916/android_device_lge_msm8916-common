@@ -665,11 +665,11 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service wcnss-service /vendor/bin/wcnss_service
-    class main
-    user root
-    group system wifi
-    oneshot
+#service wcnss-service /vendor/bin/wcnss_service
+#    class main
+#    user root
+#    group system wifi
+#    oneshot
 
 # Sensor daemon
 service sensord /system/bin/sensord
