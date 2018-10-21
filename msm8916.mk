@@ -234,6 +234,16 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0-java
 
+# VR 
+PRODUCT_PACKAGES += \
+    android.hardware.vr@1.0-service \
+    android.hardware.vr@1.0-impl
+
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.rc \
