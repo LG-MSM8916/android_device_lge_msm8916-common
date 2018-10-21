@@ -117,6 +117,11 @@ PRODUCT_PACKAGES += \
 #    FMRadio \
 #    libfmjni
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
@@ -243,7 +248,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qcom.bt.sh \
     init.qcom.power.rc \
     init.recovery.qcom.rc \
     init.board.fm.rc \
