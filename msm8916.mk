@@ -280,6 +280,15 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     librmnetctl
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@1.0-service-legacymm
+
+# Context hub HAL
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub@1.0-impl.generic \
+    android.hardware.contexthub@1.0-service
+
 # Snap
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl.legacy \
