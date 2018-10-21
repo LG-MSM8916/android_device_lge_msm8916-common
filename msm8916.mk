@@ -322,7 +322,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hwaddrs
 
-#
 # loggy
 PRODUCT_PACKAGES += \
     loggy.sh
