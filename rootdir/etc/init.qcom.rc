@@ -25,10 +25,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /system/vendor/etc/init/hw/init.qcom.usb.rc
-import /system/vendor/etc/init/hw/init.qcom.power.rc
-import /system/vendor/etc/init/hw/init.target.rc
-import /system/vendor/etc/init/hw/init.board.sensors.rc
+import init.qcom.usb.rc
+import init.qcom.power.rc
+import init.target.rc
+import init.board.sensors.rc
 
 on early-init
     symlink /dev/diag_lge /dev/diag
@@ -59,7 +59,7 @@ on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all /system/vendor/etc/fstab.qcom
+    mount_all fstab.qcom
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
     setprop ro.crypto.fuse_sdcard true
