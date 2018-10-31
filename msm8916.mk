@@ -245,9 +245,7 @@ PRODUCT_PACKAGES += \
     init.baseband.sh \
     init.qcom.fm.sh \
     init.class_main.sh \
-
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/rootdir/etc/ueventd.qcom.rc:system/vendor/ueventd.rc
+    ueventd.qcom.rc
 
 # Debug
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
