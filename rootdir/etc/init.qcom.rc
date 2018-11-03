@@ -38,6 +38,13 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
+# QSEE rpmb listener need symlink for bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    # Start qseecomd early as we mount system/ early
+    # vold needs keymaster which needs qseecomd
+    start qseecomd
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
@@ -56,13 +63,36 @@ on init
     chmod 0644 /sys/class/leds/red/brightness
 
 on fs
-    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
-
-    mount_all fstab.qcom
+    mount_all fstab.qcom --early
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
     setprop ro.crypto.fuse_sdcard true
+
+on post-fs
+    wait_for_prop sys.listeners.registered true
+
+    write /dev/ipa 1
+
+on late-fs
+    # Start devices by sysfs trigger
+    write /sys/kernel/boot_adsp/boot 1
+    write /sys/kernel/boot_slpi/boot 1
+
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start hwcomposer-2-1
+    start configstore-hal-1-0
+    start gralloc-2-0
+
+    # Boot-time fs tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sde/queue/iostats 0
+    write /sys/block/sde/queue/nr_requests 256
+    setprop sys.io.scheduler "cfq"
+
+    mount_all fstab.qcom --late
 
 # msm specific files that need to be created on /data
 on post-fs-data
