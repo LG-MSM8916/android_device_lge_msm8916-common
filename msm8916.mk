@@ -148,15 +148,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 
 # OMX
-#PRODUCT_PACKAGES += \
-#    libOmxAacEnc \
-#    libOmxAmrEnc \
-#    libOmxCore \
-#    libOmxEvrcEnc \
-#    libOmxQcelp13Enc \
-#    libOmxVdec \
-#    libOmxVenc \
-#    libstagefrighthw
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
 
 #PRODUCT_BOOT_JARS += \
 #    qcmediaplayer
