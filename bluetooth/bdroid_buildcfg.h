@@ -20,6 +20,7 @@
 #include <cutils/properties.h>
 #include <string.h>
 
+
 inline const char* BtmGetDefaultName()
 {
 	char device[PROPERTY_VALUE_MAX];
@@ -43,4 +44,5 @@ inline const char* BtmGetDefaultName()
 #define BT_CLEAN_TURN_ON_DISABLED TRUE
 #define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
 #define BTIF_HF_WBS_PREFERRED TRUE  /* Use WBS    */
+#undef PROPERTY_VALUE_MAX
 #endif
