@@ -218,7 +218,7 @@ service baseband-sh /vendor/bin/sh/init.baseband.sh
     oneshot
     disabled
 
-    write /proc/sys/vm/vfs_cache_pressure 10000
+    #write /proc/sys/vm/vfs_cache_pressure 10000
 
 # restart qcamerasvr when restarting mediaserver and servicemanager
 on property:init.svc.media=restarting
@@ -272,7 +272,7 @@ on boot
 
     #FM Radio
     chmod 0644 /dev/radio0
-    chown fm_radio fm_radio /dev/radio0
+    #chown fm_radio fm_radio /dev/radio0
     setprop ro.fm.module QCT
 
     #Create QMUX deamon socket area
@@ -392,7 +392,7 @@ on boot
     chown system system /sys/devices/virtual/input/lge_touch/incoming_call
     chmod 664 /sys/devices/virtual/input/lge_touch/incoming_call
     chown system system /sys/devices/virtual/input/lge_touch/ime_status
-    chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
+    #chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
     chmod 664 /sys/devices/virtual/input/lge_touch/keyguard
     chown system system /sys/devices/virtual/input/lge_touch/ts_noise_log_enable
     chmod 664 /sys/devices/virtual/input/lge_touch/ts_noise_log_enable
