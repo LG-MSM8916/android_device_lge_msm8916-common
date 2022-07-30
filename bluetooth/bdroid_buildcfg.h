@@ -17,13 +17,21 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <cutils/properties.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+int property_get(const char *key, char *value, const char *default_value);
+#ifdef __cplusplus
+}
+#endif
+
+// #include <cutils/properties.h>
 #include <string.h>
 
 
 inline const char* BtmGetDefaultName()
 {
-	char device[PROPERTY_VALUE_MAX];
+	char device[92];
 	property_get("ro.product.device", device, "");
 
 	if (!strcmp("m216", device)) {
@@ -44,5 +52,4 @@ inline const char* BtmGetDefaultName()
 #define BT_CLEAN_TURN_ON_DISABLED TRUE
 #define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
 #define BTIF_HF_WBS_PREFERRED TRUE  /* Use WBS    */
-#undef PROPERTY_VALUE_MAX
 #endif
